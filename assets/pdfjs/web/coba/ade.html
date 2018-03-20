@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ade</title>
+</head>
+<!-- <link rel="stylesheet" href="annotator.min.css"> -->
+<link rel="stylesheet" href="http://assets.annotateit.org/annotator/v1.1.0/annotator.min.css">
+<link rel="stylesheet" href="jquery-ui.css">
+<script src="jquery-ui.js"></script>
+<body>
+
+<div id="content">
+	<div>ajdlahdkahkdashkdahdksahkdhakdhakda</div>
+	<div>adsadadadlqsh qh qhndhqwkhc qhc q q</div>
+</div>
+
+<!-- <script src="annotator-full.min.js"></script>
+<script src="jquery.min.js"></script> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="http://assets.annotateit.org/annotator/v1.1.0/annotator-full.min.js"></script>
+
+<script>
+  jQuery(function ($) {
+
+   $('#content').annotator();
+
+   $('#content').annotator().annotator('addPlugin', 'Tags');
+   var availableTags = [
+    "Tag1",
+    "OtherTag",
+    "Tag2",
+  ];
+  $('#content').data('annotator').plugins.Tags.input.autocomplete({
+    source: availableTags
+  });
+});
+</script>
+</body>
+</html>
